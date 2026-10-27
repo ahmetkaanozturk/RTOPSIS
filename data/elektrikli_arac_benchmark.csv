@@ -1,0 +1,15 @@
+Model,Menzil_WLTP_km,Hizlanma_0_100_sn,Batarya_kWh,Fiyat_BinTL,Hizli_Sarj_dk,Bagaj_Hacmi_L,Motor_Gucu_HP,Tuketim_kWh_100km
+Togg T10X V2 Uzun Menzil,523.0,7.8,88.5,1820.0,28.0,441.0,218.0,16.9
+Tesla Model Y Long Range AWD,533.0,5.0,78.1,2350.0,25.0,854.0,514.0,16.9
+BYD Seal Excellence AWD,520.0,3.8,82.5,2150.0,26.0,400.0,530.0,NaN
+Hyundai Ioniq 5 Progressive 4x4,507.0,5.1,77.4,2450.0,18.0,527.0,325.0,17.9
+Kia EV6 GT-Line AWD,506.0,5.2,77.4,2750.0,18.0,490.0,325.0,18.0
+MG4 Luxury 64kWh,435.0,7.9,64.0,1450.0,35.0,363.0,204.0,16.6
+Volvo EX30 Ultra Twin Motor,450.0,3.6,69.0,2250.0,26.0,318.0,428.0,17.5
+Renault Megane E-Tech Iconic,450.0,7.4,60.0,1750.0,NaN,440.0,220.0,15.8
+BMW i4 eDrive40 M Sport,590.0,5.7,83.9,3450.0,30.0,470.0,340.0,16.1
+Yerli Yeni Nesil Prototip EV,510.0,6.2,80.0,1690.0,NaN,480.0,260.0,NaN
+Mercedes-Benz EQB 350 4MATIC,419.0,6.2,66.5,3100.0,32.0,495.0,292.0,18.7
+Peugeot E-3008 Allure 73kWh,525.0,8.7,73.0,1950.0,30.0,520.0,210.0,16.7
+Kati Hal Bataryali Konsept EV,750.0,3.2,120.0,NaN,NaN,510.0,540.0,NaN
+Erken Asama Sehir Ici Mikro EV,NaN,14.5,18.0,620.0,NaN,NaN,45.0,NaN

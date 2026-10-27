@@ -1,0 +1,14 @@
+{
+  "source_id": "nasa_phm",
+  "local_path": "data\\nasa_cmapss_fd001.csv",
+  "source_url": "https://raw.githubusercontent.com/DemetraAS/C-MAPSS/2f711de6746601afef1e016ba4e98fea3b5f92ff/train_FD001.txt",
+  "publisher": "NASA",
+  "license": "Dataset-specific NASA reuse terms",
+  "accessed_at_utc": "2026-10-14T16:06:27.938786+00:00",
+  "sha256": "c57a709dff0133b49fd966b51f58d6f736b343ed79f1961842a7ab26497fec30",
+  "row_count": 20631,
+  "column_count": 8,
+  "missing_cells": 0,
+  "missingness_observed_or_injected": "observed",
+  "outcome_definition": "C-MAPSS FD001 simulated engine degradation trajectory; RUL file retained separately; acquisition is a GitHub mirror because NASA currently marks C-MAPSS unavailable for download."
+}

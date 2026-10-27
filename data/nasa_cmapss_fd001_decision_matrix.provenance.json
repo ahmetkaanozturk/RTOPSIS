@@ -1,0 +1,14 @@
+{
+  "source_id": "nasa_phm",
+  "local_path": "data\\nasa_cmapss_fd001_decision_matrix.csv",
+  "source_url": "https://raw.githubusercontent.com/DemetraAS/C-MAPSS/2f711de6746601afef1e016ba4e98fea3b5f92ff/test_FD001.txt",
+  "publisher": "NASA",
+  "license": "Dataset-specific NASA reuse terms",
+  "accessed_at_utc": "2026-10-14T16:08:08.805280+00:00",
+  "sha256": "801539f3da5b3b00ab1d38258555fa9988939a90be6511be7adcdb98a8e47288",
+  "row_count": 100,
+  "column_count": 8,
+  "missing_cells": 0,
+  "missingness_observed_or_injected": "observed",
+  "outcome_definition": "One row per FD001 test engine; criteria are final observed cycle and mean sensor summaries; RUL is retained as an outcome label, not used as a criterion."
+}

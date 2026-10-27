@@ -1,0 +1,14 @@
+{
+  "source_id": "ted_open_data",
+  "local_path": "data\\ted_sample.csv",
+  "source_url": "https://data.ted.europa.eu/",
+  "publisher": "Publications Office of the European Union",
+  "license": "EU open data terms; verify notice-level reuse conditions",
+  "accessed_at_utc": "2026-10-14T16:02:58.368284+00:00",
+  "sha256": "5ba7e8ec904795f61b96aabc8cdf3a4b6969dffc238bbbfea5334accab853e17",
+  "row_count": 100,
+  "column_count": 5,
+  "missing_cells": 0,
+  "missingness_observed_or_injected": "observed",
+  "outcome_definition": "Notice-level publication, procedure, notice type and form type; no supplier award label in this extract."
+}

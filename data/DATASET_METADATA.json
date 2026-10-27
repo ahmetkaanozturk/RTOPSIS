@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "uci_automobile",
+      "filename": "uci_automobile_missing_benchmark.csv",
+      "title": "UCI 1985 Automobile Eksik Veri Benchmarkı (25 Araç)",
+      "is_synthetic": false,
+      "domain": "Otomotiv / Karşılaştırma",
+      "source_name": "UCI Machine Learning Repository: 1985 Automobile Dataset",
+      "source_url": "https://archive.ics.uci.edu/dataset/10/automobile",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "induction_method": "Orijinal veri kümesindeki doğal eksik hücreler (normalized-losses, price vb.) ve kontrollü MCAR/MNAR maskelemesi.",
+      "known_limitations": "1985 yılı araç teknik özellikleri içerdiğinden modern elektrikli veya hibrit dinamikleri temsil etmez; temel amaç algoritmik stres testidir."
+    },
+    {
+      "id": "hava_savunma_radar",
+      "filename": "hava_savunma_radar_tehdit.csv",
+      "title": "Taktik Hava Savunma Radar Tehdit Değerlendirme (TEWA)",
+      "is_synthetic": true,
+      "domain": "Savunma Sanayii / Radar C2",
+      "source_name": "Açık kaynak askeri doktrinler (Jane's Defence, Air Power Australia, açık füze hız/RCS bültenleri) temel alınarak modellenmiş sentetik taktik senaryo.",
+      "source_url": "Sentetik modelleme (Açık kaynak savunma parametreleri referanslı)",
+      "license": "Açık Araştırma / Proje İçi Sentetik Kullanım",
+      "induction_method": "Elektronik taarruz (ECM Jamming) ve arazi karartması simülasyonu ile ESM ve menzil sensör izlerinde MNAR (kasıtlı karartma) deseni.",
+      "known_limitations": "Gerçek radar ham I/Q sinyali veya gizli askeri telemetri içermez. Sayısal parametreler kavramsal demonstrasyon ve test amaçlıdır."
+    },
+    {
+      "id": "jeopolitik_catisma",
+      "filename": "jeopolitik_catisma_istihbarat.csv",
+      "title": "Jeopolitik Çatışma İstihbaratı ve Erken Uyarı",
+      "is_synthetic": true,
+      "domain": "Jeopolitik / Kriz Yönetimi",
+      "source_name": "SIPRI Askeri Harcamalar Yıllığı, ACLED Çatışma Veri Tabanı ve açık kaynak istihbarat (OSINT) göstergelerinden türetilmiş sentetik matris.",
+      "source_url": "https://www.sipri.org / https://acleddata.com (Referans alınarak türetilmiştir)",
+      "license": "Akademik Araştırma Amaçlı Sentetik Türetim",
+      "induction_method": "Kapalı rejimler ve istihbarat kör noktaları simülasyonu (MNAR).",
+      "known_limitations": "Canlı istihbarat akışı değildir; statik risk kıyaslama deneyleri için hazırlanmıştır."
+    },
+    {
+      "id": "elektrikli_arac",
+      "filename": "elektrikli_arac_benchmark.csv",
+      "title": "Elektrikli Araçlar (EV 2026) Kıyaslama Benchmarkı",
+      "is_synthetic": false,
+      "domain": "Otomotiv / Tüketici",
+      "source_name": "ADAC Ecotest, EPA ve WLTP kamuya açık teknik bültenlerinden derlenmiş karşılaştırma veri seti.",
+      "source_url": "https://www.adac.de / https://www.fueleconomy.gov",
+      "license": "Kamuya Açık Tüketici Test Bültenleri",
+      "induction_method": "Yeni piyasaya çıkan modellerin henüz resmi WLTP kış testlerinin tamamlanmamış olması durumu (Gerçek dünyadaki veri eksikliği simülasyonu).",
+      "known_limitations": "Kamuya açık teknik kaynaklardan derlenmiştir; kayıt bazında test tutanakları içermez. Fiyatlar ve donanımlar tahmini baz düzeydedir."
+    },
+    {
+      "id": "iha_savunma",
+      "filename": "iha_savunma_benchmark.csv",
+      "title": "Taktik ve MALE İnsansız Hava Aracı (İHA) Seçimi",
+      "is_synthetic": true,
+      "domain": "Savunma Tedariki",
+      "source_name": "Savunma Sanayii Başkanlığı kamuya açık broşürleri, Baykar, TUSAŞ ve uluslararası üretici katalogları referans alınarak üretilmiştir.",
+      "source_url": "Açık kaynak savunma katalogları",
+      "license": "Açık Akademik Kullanım",
+      "induction_method": "Gizlilik dereceli motor ömrü ve MTBF güvenilirlik hücrelerinde bilgi eksikliği.",
+      "known_limitations": "Gizli askeri performans verileri içermez; açık kaynaklı menzil ve faydalı yük verilerini kullanır."
+    },
+    {
+      "id": "tedarikci_secimi",
+      "filename": "tedarikci_secimi_benchmark.csv",
+      "title": "Kurumsal Tedarikçi Değerlendirme ve Denetimi",
+      "is_synthetic": true,
+      "domain": "Endüstri Mühendisliği / Tedarik Zinciri",
+      "source_name": "ISO 9001 tedarikçi denetim kriterleri ve kamu ihale şartname şablonları.",
+      "source_url": "Endüstri standardı tedarikçi değerlendirme formülasyonu",
+      "license": "Akademik Kullanım",
+      "induction_method": "Yeni teklif veren firmaların geçmiş temerrüt veya garanti maliyeti beyan etmemesi (MNAR maliyet saklama).",
+      "known_limitations": "Belirli bir şirketin ticari sırlarını içermez; sentetik endüstri standardı vaka çalışmasıdır."
+    },
+    {
+      "id": "startuplar_girisim_sermayesi",
+      "filename": "startuplar_girisim_sermayesi.csv",
+      "title": "Erken ve Büyüme Aşaması Girişim Sermayesi (VC) Yatırımı",
+      "is_synthetic": true,
+      "domain": "Finans / Risk Sermayesi",
+      "source_name": "Crunchbase ve PitchBook erken aşama SaaS/Fintech büyüme metrikleri şablonu.",
+      "source_url": "Sentetik VC Due Diligence Modeli",
+      "license": "Araştırma ve Eğitim Amaçlı",
+      "induction_method": "Erken aşama girişimlerin CAC (Müşteri Edinme Maliyeti) ve Net Kar Marjı raporlamamış olması.",
+      "known_limitations": "Gerçek girişimlerin gizli finansal tabloları değil, sektörel ortalamaları yansıtan simülasyondur."
+    },
+    {
+      "id": "klinik_ilac_biyoteknoloji",
+      "filename": "klinik_ilac_biyoteknoloji.csv",
+      "title": "Klinik Onkoloji Tedavi ve İlaç Adayı Kıyaslaması",
+      "is_synthetic": true,
+      "domain": "Sağlık / Biyoteknoloji",
+      "source_name": "PubMed / ClinicalTrials.gov Faz-2/Faz-3 onkoloji çalışma protokolleri göstergeleri.",
+      "source_url": "https://clinicaltrials.gov (Parametre şablonu)",
+      "license": "Akademik Araştırma Amaçlı Sentetik Türetim",
+      "induction_method": "Devam eden Faz-3 çalışmalarında uzun vadeli 5 yıllık sağkalım verisinin henüz oluşmamış olması.",
+      "known_limitations": "Klinik karar için kullanılamaz; algoritmanın medikal eksik veri senaryolarındaki davranışını test eder."
+    },
+    {
+      "id": "yenilenebilir_enerji_santrali",
+      "filename": "yenilenebilir_enerji_santrali.csv",
+      "title": "Yenilenebilir Enerji Santrali Saha Yatırımı",
+      "is_synthetic": true,
+      "domain": "Enerji / Altyapı",
+      "source_name": "IRENA Yenilenebilir Maliyet Benchmarkı ve TEİAŞ kapasite tahsis göstergeleri referanslı.",
+      "source_url": "https://www.irena.org",
+      "license": "Akademik Kullanım",
+      "induction_method": "Rüzgar/Güneş ölçüm direklerinde bazı aylara ait ölçüm kaybı simülasyonu.",
+      "known_limitations": "Resmi ÇED ve fizibilite raporlarının yerini tutmaz; karar destek algoritması demonstrasyonudur."
+    }
+  ]
+}
+

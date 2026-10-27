@@ -1,0 +1,9 @@
+Tedarikci,Kalite_Uygunluk_Yuzde,Birim_Fiyat_TL,Teslimat_Gecikme_Gun,Finansal_Guvenilirlik_Skor,Karbon_Ayak_Izi_kg,Garanti_Suresi_Ay
+Tedarikci_A_Koklu,98.5,120.0,1.2,92.0,14.5,24.0
+Tedarikci_B_KOBI,94.0,85.0,2.5,75.0,NaN,12.0
+Tedarikci_C_Global,99.2,165.0,0.5,96.0,8.2,36.0
+Tedarikci_D_Ekonomik,88.0,65.0,5.8,60.0,22.0,6.0
+Tedarikci_E_Teknoloji,96.5,110.0,1.8,84.0,11.0,NaN
+Tedarikci_F_YeniGirisimci,92.0,78.0,NaN,70.0,NaN,18.0
+Tedarikci_G_Surdurulebilir,97.5,NaN,1.5,89.0,5.2,48.0
+Tedarikci_H_OnaysizMerdivenalti,NaN,42.0,8.5,NaN,NaN,3.0

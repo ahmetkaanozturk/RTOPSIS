@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rcz-topsis"
+version = "1.1.0"
+description = "Contextual Zero Algebra (CZ-Algebra) Temelli Eksik Verili Çok Kriterli Karar Verme (MCDM) Araştırma Prototipi"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "R-CZ Araştırma Grubu" }
+]
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scipy>=1.10.0",
+    "matplotlib>=3.7.0",
+    "streamlit>=1.35.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py"]
+

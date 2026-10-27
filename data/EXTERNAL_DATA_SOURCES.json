@@ -1,0 +1,46 @@
+{
+  "purpose": "Gerçek kurumsal veri doğrulama hatları; ham kaynaklar bu dosyaya gömülmez.",
+  "usage": "Kaynak dosyası kullanıcı tarafından indirildikten sonra provenance kaydı üretilir.",
+  "sources": [
+    {
+      "id": "ted_open_data",
+      "title": "TED Open Data / EU Public Procurement",
+      "publisher": "Publications Office of the European Union",
+      "url": "https://data.ted.europa.eu/",
+      "role": "Kamu ihale hattı",
+      "data_status": "official_public_source",
+      "missingness_status": "field/reporting dependent; not automatically MNAR",
+      "outcome_status": "award/contract outcome only where award records exist"
+    },
+    {
+      "id": "world_bank_gppd",
+      "title": "Global Public Procurement Database",
+      "publisher": "World Bank",
+      "url": "https://datacatalog.worldbank.org/search/dataset/0038958/global-public-procurement-database",
+      "role": "Kamu ihale sistemi düzeyi yardımcı hat",
+      "data_status": "official_public_source",
+      "missingness_status": "aggregated indicator gaps",
+      "outcome_status": "system-level indicators, not supplier award labels"
+    },
+    {
+      "id": "nasa_phm",
+      "title": "NASA Prognostics Center of Excellence Data Repository",
+      "publisher": "NASA",
+      "url": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/",
+      "role": "Mühendislik/risk hattı",
+      "data_status": "official_public_source",
+      "missingness_status": "dataset-specific; injected masks must be labeled",
+      "outcome_status": "dataset-specific failure or RUL label"
+    },
+    {
+      "id": "nrel_ev_fleet",
+      "title": "Modeled Electricity Demand Profiles for Public EV Fleets",
+      "publisher": "National Renewable Energy Laboratory / U.S. Department of Energy",
+      "url": "https://data.openei.org/submissions/8311",
+      "role": "Mühendislik/enerji yardımcı hattı",
+      "data_status": "official_public_source",
+      "missingness_status": "aggregation/model coverage gaps",
+      "outcome_status": "fleet demand outcome, not procurement decision label"
+    }
+  ]
+}

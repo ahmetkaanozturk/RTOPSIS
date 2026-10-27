@@ -1,0 +1,14 @@
+Hedef_Kodu,Hedef_Tipi,Hiz_Mach,Vurus_Suresi_sn,RCS_m2,Aci_Sapma_deg,ESM_Karistirma_dBm,Varlik_Kritiklik
+TGT-01_Hipersonik,Hipersonik Seyir Fuzesi (Zircon/Kinzhal sinifi),6.2,28.0,0.15,2.1,88.0,10.0
+TGT-02_Hayalet_Avci,5. Nesil Hayalet Muharip Ucak (Su-57/J-20 sinifi),1.8,95.0,0.01,4.5,NaN,9.5
+TGT-03_Kamikaze_Suru,Alcak Irtifa Kamikaze Suru IHA Grubu,0.25,240.0,0.05,1.2,NaN,8.0
+TGT-04_Elektronik_Harp,Stand-off Jammer (Agir Gurultu Karistirmasi),0.85,380.0,3.50,14.0,115.0,7.5
+TGT-05_Seyir_Fuzesi,Arazi Maskelemeli Seyir Fuzesi (Tomahawk/Kalibr),0.75,110.0,0.08,0.8,NaN,9.0
+TGT-06_Anti_Radar,Anti-Radyasyon Fuzesi (HARM tipi radar avcisi),2.4,42.0,0.12,1.5,NaN,10.0
+TGT-07_Balistik_RV,Orta Menzilli Balistik Fuze Reentry Vehicle,7.5,18.0,0.03,0.4,NaN,10.0
+TGT-08_Karasal_IHA,Taktik Kesif ve Lazer Isaretleme IHAsi,0.18,480.0,0.20,6.0,35.0,6.5
+TGT-09_Sahte_Hedef,Aldatici Radar Yansiticisi (Chaff / TALD Decoy),0.80,130.0,1.20,8.5,NaN,2.0
+TGT-10_Sivil_A320,Transponder Calisan Sivil Yolcu Ucagi (Koridor Ici),0.78,520.0,25.0,22.0,0.0,1.0
+TGT-11_Stealth_Drone,Gizli Radar Sinsisi Yekpare Kanat Mini-IHA,0.30,190.0,0.005,3.2,NaN,8.5
+TGT-12_Gecici_Parazit,Meteorolojik Bulut / Kuş Sürüsü Yankı İzi,NaN,NaN,0.80,45.0,NaN,NaN
+

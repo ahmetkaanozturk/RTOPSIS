@@ -1,0 +1,45 @@
+{
+  "checked_at_utc": "2026-10-14T16:08:30Z",
+  "acquisitions": [
+    {
+      "source_id": "ted_open_data",
+      "status": "acquired",
+      "local_files": [
+        "data/ted_sample.csv",
+        "data/ted_sample.provenance.json"
+      ],
+      "note": "100 notice-level rows retrieved from the official TED SPARQL endpoint for 2024-11-06. The extract has no supplier award outcome label."
+    },
+    {
+      "source_id": "world_bank_gppd",
+      "status": "blocked",
+      "local_files": [],
+      "checked_urls": [
+        "https://datacatalog.worldbank.org/search/dataset/0038958/global-public-procurement-database",
+        "https://databankfiles.worldbank.org/public/ddpext_download/GPPD/Global_Public_Procurement_Database.xlsx"
+      ],
+      "note": "The catalog is discoverable, but the previously documented XLSX object currently returns BlobNotFound. No replacement file was inferred or fabricated."
+    },
+    {
+      "source_id": "nasa_phm",
+      "status": "acquired_with_mirror",
+      "local_files": [
+        "data/nasa_cmapss_fd001_decision_matrix.csv",
+        "data/nasa_cmapss_fd001_decision_matrix.provenance.json",
+        "data/nasa_cmapss_fd001.csv",
+        "data/nasa_cmapss_fd001.provenance.json"
+      ],
+      "note": "NASA's official C-MAPSS portal currently states that C-MAPSS is unavailable for download. A commit-pinned public mirror was used and recorded in provenance; this is not claimed as a direct NASA download."
+    },
+    {
+      "source_id": "nrel_ev_fleet",
+      "status": "blocked",
+      "local_files": [],
+      "checked_urls": [
+        "https://data.openei.org/submissions/8311",
+        "https://data.nlr.gov/submissions/280"
+      ],
+      "note": "The historical OEDI page currently reports no data, while the newer catalog URL did not expose a stable downloadable file in this run. No synthetic replacement was created."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Ilac_Adayi,5_Yillik_Sagkalim_Pct,Agir_Yan_Etki_Orani_Pct,Tedavi_Kuru_Maliyeti_BinUSD,Iyilestirme_Hizi_Hafta,Biyoyararlanim_Pct,Hedefe_Ozgunluk_Skoru
+Standart Kemoterapi (Referans Protokol),52.0,28.5,45.0,18.0,65.0,6.2
+OncoTarget-A (Faz-3 Onayli),78.0,14.2,120.0,12.0,88.0,8.9
+ImmunoBlock-X (Faz-2 Hizli Yol),NaN,6.8,85.0,9.0,94.0,9.4
+CellGene-CAR-T Hucre Tedavisi,86.0,22.0,380.0,6.0,98.0,9.8
+NanoCarrier-Pt Hedefli Platin,74.0,9.5,NaN,11.0,82.0,9.1
+PeptideLock-9 Hucre Ici Blokor,NaN,4.2,95.0,10.0,78.0,8.7
+mRNATherapy-Alpha Biyoteknoloji,82.0,11.0,NaN,8.0,91.0,9.5
+KinaseStop-Beta Sentetik Molekul,68.0,16.5,65.0,14.0,72.0,7.8
+BioMolecule-Zeta (Faz-1 Erken Asama),NaN,32.0,NaN,NaN,NaN,5.5
+DualAction-Combo Bilesik,76.0,NaN,140.0,NaN,85.0,8.8
+

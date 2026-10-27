@@ -1,0 +1,17 @@
+[theme]
+base = "light"
+primaryColor = "#1d4ed8"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f1f5f9"
+textColor = "#0f172a"
+font = "sans serif"
+
+[server]
+headless = true
+# GÜVENLİK NOTU:
+# Aşağıdaki ayarlar (CORS ve XsrfProtection kapalı) yalnızca yerel demonstrasyon / geliştirme
+# ortamı içindir. Uygulama bir kurumsal ağda veya internete açık bir sunucuda yayınlanacaksa
+# enableXsrfProtection = true ve enableCORS = true yapılmalıdır.
+enableCORS = false
+enableXsrfProtection = false
+

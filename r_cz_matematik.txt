@@ -1,0 +1,104 @@
+================================================================================
+DÜZELTİLMİŞ BAĞLAMSAL KARAR MODELİ (R-CZ-TOPSIS v1.1) MATEMATİKSEL KURALLARI
+================================================================================
+
+1. TEMEL KAVRAMLAR VE GİRDİLER
+--------------------------------------------------------------------------------
+- Alternatifler Kümesi: A = {A₁, A₂, ..., Aₙ} (Toplam n alternatif)
+- Kriterler Kümesi:     C = {c₁, c₂, ..., cₘ} (Toplam m kriter)
+- Kriter Ağırlıkları:  W = [w₁, w₂, ..., wₘ],  ∑ wⱼ = 1.0 (wⱼ > 0)
+- Kriter Türleri:       Fayda (↑ - Yüksek iyi) veya Maliyet (↓ - Düşük iyi)
+
+Her hücre bir Değer-Bağlam çiftidir: (xᵢⱼ , σᵢⱼ)
+- σᵢⱼ = A  (Action):    Kriter ölçülmüş, kesin veridir. (0_A = Gerçek sıfır)
+- σᵢⱼ = I  (Inaction):  Kriter ölçülmemiş, bilgi yoktur. (0_I = Bilgi yokluğu)
+
+
+2. AKTİF İNDEKSLER VE BİLGİ KAPSAMA ORANI
+--------------------------------------------------------------------------------
+Bir i alternatifi için ölçümü mevcut olan kriterlerin kümesi:
+  Jᵢ* = { j ∈ {1, ..., m} | σᵢⱼ = A }
+  mᵢ* = Jᵢ* kümesinin eleman sayısı (Aktif kriter adedi)
+
+Alternatifin sahip olduğu bilginin toplam sistem içindeki ağırlık payı:
+  Wᵢ = ∑ wⱼ   (j ∈ Jᵢ* üzerinden toplam)
+  (Tüm verisi tamsa Wᵢ = 1.0; verisi eksildikçe Wᵢ küçülür, 0 < Wᵢ ≤ 1.0)
+
+
+3. GÜVENLİK EŞİĞİ (HARD GATEKEEPER)
+--------------------------------------------------------------------------------
+Bir alternatifin genel sıralamaya girebilmesi için şu iki şartı sağlaması zorunludur:
+  1) Wᵢ ≥ W_threshold - threshold_tol   (Standart eşik: 0.50, tol = 1e-9)
+  2) mᵢ* ≥ min_active_criteria         (Standart: En az 2 farklı kriter ölçülmüş olmalı)
+
+Bu şartı sağlamayan alternatif "INSUFFICIENT_DATA" statüsüne ayrılır, elenir (skoru 0.0, rank = -1).
+
+
+4. İZDÜŞÜMSEL VEKTÖR NORMALİZASYONU
+--------------------------------------------------------------------------------
+Her j sütunu için norm paydası (yalnızca aktif ölçümler üzerinden):
+  Sⱼ = √ [ ∑ (xₖⱼ)² ]   (k ∈ {aktif olan alternatifler})
+
+Normalize edilmiş değer (yalnızca aktif kriterler için):
+  rᵢⱼ = xᵢⱼ / Sⱼ        (j ∉ Jᵢ* ise rᵢⱼ tanımsızdır, alt-uzay dışıdır)
+
+
+5. GLOBAL AĞIRLIKLANDIRMA (v1.1 KANONİK STANDART)
+--------------------------------------------------------------------------------
+v1.1 Güncellemesi: Koordinat uzayında yapay şişirmeyi (eksik verili adayı ödüllendiren
+boyut sapmasını) engellemek amacıyla, ağırlıklandırma doğrudan evrensel global ağırlıklarla
+yapılır:
+  Vᵢⱼ = wⱼ × rᵢⱼ        (j ∈ Jᵢ* için)
+
+[Tarihsel Not: v1.0 sürümündeki yerel ağırlıklandırma w'ᵢⱼ = wⱼ / Wᵢ, verisi eksik adayın
+koordinatlarını 1/Wᵢ kat büyüterek haksız avantaj yarattığı için varsayılandan çıkarılmış,
+yalnızca karşılaştırma modu olarak saklanmıştır.]
+
+
+6. İDEAL REFERANS NOKTALARININ BELİRLENMESİ
+--------------------------------------------------------------------------------
+Aktif ve geçerli alternatiflerin Vᵢⱼ değerleri üzerinden:
+
+- Fayda Kriteri (↑) ise:
+    vⱼ⁺ = Maksimum(Vₖⱼ)   (k ∈ {j kriterinde aktif olan alternatifler})
+    vⱼ⁻ = Minimum(Vₖⱼ)
+
+- Maliyet Kriteri (↓) ise:
+    vⱼ⁺ = Minimum(Vₖⱼ)
+    vⱼ⁻ = Maksimum(Vₖⱼ)
+
+
+7. ALT-UZAY ÖKLİD UZAKLIKLARI
+--------------------------------------------------------------------------------
+Her alternatifin yalnızca BİLDİĞİ kriterler (Jᵢ*) üzerinden alt-uzay mesafeleri:
+
+Pozitif İdeale Uzaklık:
+  Dᵢ⁺ = √ [ ∑ (Vᵢⱼ - vⱼ⁺)² ]   (j ∈ Jᵢ* üzerinden toplam)
+
+Negatif İdeale Uzaklık:
+  Dᵢ⁻ = √ [ ∑ (Vᵢⱼ - vⱼ⁻)² ]   (j ∈ Jᵢ* üzerinden toplam)
+
+Temel Göreceli Yakınlık Skoru (C_base):
+  C_base(i) = Dᵢ⁻ / (Dᵢ⁺ + Dᵢ⁻)
+  (Eğer Dᵢ⁺ + Dᵢ⁻ = 0 ise C_base = 0.50 kabul edilir)
+
+
+8. ASİMETRİK RİSK CEZASI VE NİHAİ SKOR
+--------------------------------------------------------------------------------
+Alternatifin gizlediği/ölçülmeyen kriterler arasında MALİYET kriteri var mı kontrolü:
+  missing_cost = ∑ wⱼ   (j ∉ Jᵢ* ve Kriter Türü = Maliyet olanlar için)
+  κᵢ = 1.0 + missing_cost
+
+Epistemik Güvenilirlik Çarpanı (Γᵢ):
+  Γᵢ = (Wᵢ)^(α × κᵢ)
+  (α: Riskten kaçınma katsayısı, standart değer = 0.50)
+
+NİHAİ SIRALAMA SKORU (C*):
+  Cᵢ* = C_base(i) × Γᵢ
+
+[Bilimsel Sınırlama Notu: κᵢ asimetrik cezası maliyet gizlemeyi cezalandırır ve bastırır;
+ancak bir adayın diğer fayda kriterleri aşırı baskınsa yine de birinci çıkabilmesi
+matematiksel sınır vaka olarak mümkündür. Karar verici denetimi esastır.]
+
+Alternatifler Cᵢ* skoruna göre büyükten küçüğe sıralanır.
+================================================================================
